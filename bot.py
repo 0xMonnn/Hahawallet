@@ -1,14 +1,14 @@
-from aiohttp import (
-    ClientResponseError,
-    ClientSession,
-    ClientTimeout
-)
+from aiohttp import ClientResponseError, ClientSession, ClientTimeout
 from aiohttp_socks import ProxyConnector
 from fake_useragent import FakeUserAgent
 from datetime import datetime
 from colorama import *
-import asyncio, json, os, pytz
+import asyncio
+import json
+import os
+import pytz
 
+# Timezone
 wib = pytz.timezone('Asia/Jakarta')
 
 class HahaWallet:
@@ -39,14 +39,16 @@ class HahaWallet:
         )
 
     def welcome(self):
-        print(
-            f"""
-        {Fore.GREEN + Style.BRIGHT}Auto Claim Karma {Fore.BLUE + Style.BRIGHT}Haha Wallet - BOT
-            """
-            f"""
-        {Fore.GREEN + Style.BRIGHT}Rey? {Fore.YELLOW + Style.BRIGHT}<INI WATERMARK>
-            """
-        )
+        print("\033[96m\033[1m █████╗ ███████╗██╗   ██╗███╗   ██╗ ██████╗\033[0m")
+        print("\033[96m\033[1m██╔══██╗██╔════╝╚██╗ ██╔╝████╗  ██║██╔════╝\033[0m")
+        print("\033[96m\033[1m███████║███████╗ ╚████╔╝ ██╔██╗ ██║██║      \033[0m")
+        print("\033[96m\033[1m██╔══██║╚════██║  ╚██╔╝  ██║╚██╗██║██║      \033[0m")
+        print("\033[96m\033[1m██║  ██║███████║   ██║   ██║ ╚████║╚██████╔ \033[0m")
+        print("\033[96m\033[1m╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ \033[0m")
+        print("\033[96m\033[1m               JOIN AIRDROP         \033[0m")
+        print("\033[96m\033[1m      https://t.me/AirdropSyncReborn \033[0m")
+
+
 
     def format_seconds(self, seconds):
         hours, remainder = divmod(seconds, 3600)
